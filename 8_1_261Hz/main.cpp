@@ -21,7 +21,7 @@ void playNote(int freq)
     audio.spk.play(waveform, kAudioTxBufferSize);
   }
 }
-void playNoteC(void) {idC = queue.call_every(100, playNote, 261);}
+void playNoteC(void) {idC = queue.call_every(100, playNote, 261);} //here, I change it from 1 to 100 to heard the difference
 void stopPlayNoteC(void) {queue.cancel(idC);}
 
 int main(void)
