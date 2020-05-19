@@ -19,6 +19,7 @@ print("Sending signal ...")
 print("It may take about %d seconds ..." % (int(signalLength * waitTime)))
 for data in signalTable:
   s.write(bytes(formatter(data), 'UTF-8'))
+  print("%f",bytes(formatter(data), 'UTF-8'))
   time.sleep(waitTime)
 s.close()
 print("Signal sended")
